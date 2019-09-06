@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: jakejarvis/hugo-build-action@dev
+    - uses: jakejarvis/hugo-build-action@develop
       with:
         args: --minify --buildDrafts
 ```
