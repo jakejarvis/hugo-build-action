@@ -9,7 +9,7 @@ ENV CGO_ENABLED=${CGO}
 ENV GOOS=linux
 ENV GO111MODULE=on
 
-ARG HUGO_COMMIT
+ARG HUGO_COMMIT=master
 
 WORKDIR /go/src/github.com/gohugoio/hugo
 
