@@ -4,12 +4,12 @@ LABEL repository="https://github.com/jakejarvis/hugo-build-action"
 LABEL homepage="https://jarv.is/"
 LABEL maintainer="Jake Jarvis <jake@jarv.is>"
 
+ARG HUGO_COMMIT
+
 ARG CGO=0
 ENV CGO_ENABLED=${CGO}
 ENV GOOS=linux
 ENV GO111MODULE=on
-
-ARG HUGO_COMMIT
 
 WORKDIR /go/src/github.com/gohugoio/hugo
 
