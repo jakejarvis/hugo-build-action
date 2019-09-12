@@ -14,8 +14,7 @@ ENV GO111MODULE=on
 WORKDIR /go/src/github.com/gohugoio/hugo
 
 RUN apk update && \
-    apk add --no-cache git musl-dev ca-certificates && \
-    update-ca-certificates && \
+    apk add --no-cache git musl-dev && \
     git clone https://github.com/gohugoio/hugo.git $GOPATH/src/github.com/gohugoio/hugo && \
     if [ ! -z "$HUGO_COMMIT" ]; then git reset --hard $HUGO_COMMIT; fi && \
     go get -d . && \
@@ -26,6 +25,12 @@ RUN hugo version
 # ---
 
 FROM alpine:latest
+
+# Twitter oEmbed shortcode fails without this (x509: certificate signed by unknown authority)
+# https://github.com/google/go-github/issues/1049
+RUN apk update && \
+    apk add --no-cache ca-certificates && \
+    update-ca-certificates
 
 COPY --from=build /go/bin/hugo /usr/bin/hugo
 
