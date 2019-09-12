@@ -14,7 +14,8 @@ ARG HUGO_COMMIT
 WORKDIR /go/src/github.com/gohugoio/hugo
 
 RUN apk update && \
-    apk add --no-cache git musl-dev && \
+    apk add --no-cache git musl-dev ca-certificates && \
+    update-ca-certificates && \
     git clone https://github.com/gohugoio/hugo.git $GOPATH/src/github.com/gohugoio/hugo && \
     if [ ! -z "$HUGO_COMMIT" ]; then git reset --hard $HUGO_COMMIT; fi && \
     go get -d . && \
