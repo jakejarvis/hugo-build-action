@@ -15,10 +15,12 @@ WORKDIR /go/src/github.com/gohugoio/hugo
 
 RUN apk update && \
     apk add --no-cache git musl-dev && \
-    git clone --depth 1 https://github.com/gohugoio/hugo.git $GOPATH/src/github.com/gohugoio/hugo && \
+    git clone https://github.com/gohugoio/hugo.git $GOPATH/src/github.com/gohugoio/hugo && \
     if [ ! -z "$HUGO_COMMIT" ]; then git reset --hard $HUGO_COMMIT; fi && \
     go get -d . && \
     go install -ldflags '-s -w'
+
+RUN hugo version
 
 # ---
 
