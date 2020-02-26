@@ -29,7 +29,7 @@ FROM alpine:latest
 # Twitter oEmbed shortcode fails without this (x509: certificate signed by unknown authority)
 # https://github.com/google/go-github/issues/1049
 RUN apk update && \
-    apk add --no-cache ca-certificates && \
+    apk add --no-cache ca-certificates git nodejs && \
     update-ca-certificates
 
 COPY --from=build /go/bin/hugo /usr/bin/hugo
