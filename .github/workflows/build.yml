@@ -1,4 +1,5 @@
-name: Test Audit
+name: Build docs
+
 on: [push, pull_request]
 
 jobs:
@@ -12,4 +13,7 @@ jobs:
       with:
         repository: gohugoio/hugoDocs
         path: docs/
-    - run: ls
+    - name: Build site
+      uses: ./
+      with:
+        args: --source docs/ --verbose
