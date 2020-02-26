@@ -1,0 +1,15 @@
+name: Test Audit
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout action
+      uses: actions/checkout@v2
+    - name: Checkout docs site
+      uses: actions/checkout@v2
+      with:
+        repository: gohugoio/hugoDocs
+        path: docs/
+    - run: ls
