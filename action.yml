@@ -3,7 +3,7 @@ description: "Hugo as an action, with extended support and legacy versions"
 author: jakejarvis
 runs:
   using: docker
-  image: docker://ghcr.io/jakejarvis/hugo-extended:0.81.0
+  image: docker://ghcr.io/jakejarvis/hugo-extended:0.82.0
 branding:
   icon: edit
   color: gray-dark
