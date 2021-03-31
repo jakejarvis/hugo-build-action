@@ -33,13 +33,15 @@ jobs:
 
 Just in case, the final container includes a few small third-party tools that are required by certain optional Hugo features:
 
-- [PostCSS (CLI)](https://github.com/postcss/postcss-cli)
+- [PostCSS](https://github.com/postcss/postcss-cli)
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
-- [Babel (CLI)](https://babeljs.io/)
+- [Babel](https://babeljs.io/)
 - [Pygments](https://pygments.org/)
 - [Asciidoctor](https://asciidoctor.org/)
+- [Pandoc](https://pandoc.org/)
+- [Docutils](https://docutils.sourceforge.io/) / [RST](https://docutils.sourceforge.io/rst.html)
 
-Node (with NPM and Yarn) and Go (for [Hugo Modules](https://gohugo.io/hugo-modules/) support) are also pre-installed.
+Node (with NPM and Yarn), Go (for [Hugo Modules](https://gohugo.io/hugo-modules/) support), and Python are also pre-installed.
 
 ## Licenses
 
