@@ -1,4 +1,4 @@
-# GitHub Action for [Hugo](https://github.com/gohugoio/hugo) ✏️ 
+# GitHub Action for [Hugo](https://github.com/gohugoio/hugo) ✏️
 
 ![Build example site](https://github.com/jakejarvis/hugo-build-action/workflows/Build%20example%20site/badge.svg)
 
@@ -40,6 +40,7 @@ Just in case, the final container includes a few small third-party tools that ar
 - [Asciidoctor](https://asciidoctor.org/)
 - [Pandoc](https://pandoc.org/)
 - [Docutils](https://docutils.sourceforge.io/) / [RST](https://docutils.sourceforge.io/rst.html)
+- [Embedded Dart Sass](https://github.com/sass/dart-sass-embedded)
 
 Node (with NPM and Yarn), Go (for [Hugo Modules](https://gohugo.io/hugo-modules/) support), and Python are also pre-installed.
 
