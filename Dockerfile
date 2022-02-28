@@ -1,4 +1,4 @@
 # https://github.com/jakejarvis/hugo-docker
-FROM ghcr.io/jakejarvis/hugo-extended:0.92.2
+FROM ghcr.io/jakejarvis/hugo-extended:0.93.0
 
 ENTRYPOINT ["hugo"]
